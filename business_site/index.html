@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <a href="#hero">Hem</a>
+  <a href="#about">Om oss</a>
+  <a href="#menu">Meny</a>
+  <a href="#contact">Kontakta oss</a>
+</nav>
+
+  <section id="hero" class="hero">
+    <h1>Välkommen till vår Restaurang</h1>
+    <p>Upptäck den finaste upplevelsen i stan.</p>
+    <button id="bokabord" type="button">Boka bord</button>
+  </section>
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2>Om Restaurangen</h2>
+      <p>
+        Utforska vår varierade meny som bjuder på enastående smakupplevelser och kulinariska höjdpunkter. Från våra saftiga hamburgare till de smakrika pastaarrabiata-rätterna, varje måltid är en perfekt kombination av noggrant utvalda ingredienser och kreativ matlagning. Våra rätter är skapade med passion och omsorg för att tillfredsställa dina smaklökar och ge en minnesvärd gastronomisk upplevelse varje gång du besöker oss.
+      </p>
+    </div>
+  </section>
+
+  <div id="order-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Din Beställning</h2>
+      <ul id="order-list">
+        <!-- Beställningsartiklar läggs här dynamiskt -->
+      </ul>
+      <button id="confirm-order" type="button">Bekräfta Beställning</button>
+    </div>
+  </div>
+
+  <section id="menu" class="menu">
+    <h2>Vår meny</h2>
+    <div class="menu-items">
+      <div id="menu_item-1" class="menu-item">
+        <img src="img/1.jpg" alt="Dish 1">
+        <h3 class="item_name">Steak</h3>
+        <p class="description">A delightful dish made with the finest ingredients.</p>
+        <p class="item_price" id="steakPrice">170 kr</p>
+        <button class="order-button" id="steak" type="button">Order Now</button>
+      </div>
+      <div id="menu_item-2" class="menu-item">
+        <img src="img/2.jpg" alt="Dish 2">
+        <h3 class="item_name">Pasta arrabiata</h3>
+        <p class="description">A mouth-watering culinary creation you won't forget.</p>
+        <p class="item_price" id="pastaPrice">155 kr</p>
+        <button class="order-button" id="pasta-arrabiata" type="button">Order Now</button>
+      </div>
+      <div id="menu_item-3" class="menu-item">
+        <img src="img/3.jpg" alt="Dish 3">
+        <h3 class="item_name">Hamburgare</h3>
+        <p class="description">A delectable dish that will tantalize your taste buds.</p>
+        <p class="item_price" id="burgerPrice">135 kr</p>
+        <button class="order-button" id="hamburgare" type="button">Order Now</button>
+      </div>
+      <div id="menu_item-4" class="menu-item">
+        <img src="img/4.jpg" alt="Dish 4">
+        <h3 class="item_name">Schnitzel</h3>
+        <p class="description">A flavorful and visually stunning dish you must try.</p>
+        <p class="item_price" id="schnitzelPrice">155 kr</p>
+        <button class="order-button" id="schnitzel" type="button">Order Now</button>
+      </div>
+      <div id="menu_item-5" class="menu-item">
+        <img src="img/5.jpg" alt="Dish 5">
+        <h3 class="item_name">Lax</h3>
+        <p class="description">A flavorful and visually stunning dish you must try.</p>
+        <p class="item_price" id="laxPrice">155 kr</p>
+        <button class="order-button" id="lax" type="button">Order Now</button>
+      </div>
+      <div id="menu_item-6" class="menu-item">
+        <img src="img/6.jpg" alt="Dish 6">
+        <h3 class="item_name">Lammkotlett</h3>
+        <p class="description">A flavorful and visually stunning dish you must try.</p>
+        <p class="item_price" id="lammPrice">155 kr</p>
+        <button class="order-button" id="lammkotlett" type="button">Order Now</button>
+      </div>
+
+      
+
+      <div class="menu-confirm"> 
+        <h2>Bekräfta din Beställning</h2>
+        <button id="bekräfta" type="button">Bekräfta</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Recensioner</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-item">
+        <img src="img/3455-1579506060.webp" alt="Customer 1">
+        <p>"Maten är helt fantastisk! Jag har aldrig smakat något liknande. Rekommenderas starkt!"</p>
+        <h4>- Zlatan Ibra</h4>
+      </div>
+      <div class="testimonial-item">
+        <img src="img/bob.jpg" alt="Customer 2">
+        <p>"Den här restaurangen är en dold pärla! Servicen är oklanderlig och atmosfären är helt enkelt himmelsk."</p>
+        <h4>- Bob Marley</h4>
+      </div>
+      <div class="testimonial-item">
+        <img src="img/ronne.jpg" alt="Customer 3">
+        <p>"Om du letar efter en oförglömlig matupplevelse är det här stället att besöka. Jag kommer tillbaka om och om igen!"</p>
+        <h4>- Cristiano Ronaldo</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+  <h2>Boka bord!</h2>
+  <form id="order-form" action="https://httpbin.org/anything" method="POST" target="_blank" class="contact-form">
+    <input type="text" id="name" name="name" placeholder="Namn" required>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <input type="number" id="guests" name="guests" placeholder="Antal personer" required>
+    <fieldset id="time-selection">
+
+  <legend>Välj bokningstid</legend>
+  <label><input type="radio" name="booking_time" value="15" required> 15:00</label>
+  <label><input type="radio" name="booking_time" value="17"> 17:00</label>
+  <label><input type="radio" name="booking_time" value="19"> 19:00</label>
+  <label><input type="radio" name="booking_time" value="21"> 21:00</label>
+  <label><input type="radio" name="booking_time" value="23"> 23:00</label>
+</fieldset>
+    <input type="password" id="password" name="password" placeholder="Lösenord" required>
+
+    <fieldset>
+      <legend>Betalningsmetod:</legend>
+      <label><input type="radio" name="payment" value="kort" required> Kort</label>
+      <label><input type="radio" name="payment" value="kontant"> Kontant</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Önskade tillval:</legend>
+      <label><input type="checkbox" name="extras" value="vin"> Vin</label>
+      <label><input type="checkbox" name="extras" value="öl"> Öl</label>
+      <label><input type="checkbox" name="extras" value="vatten"> Vatten</label>
+    </fieldset>
+
+    <textarea id="message" name="message" placeholder="Meddelande" required></textarea>
+
+    <button type="submit" id="skicka">Skicka</button>
+  </form>
+</section>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
