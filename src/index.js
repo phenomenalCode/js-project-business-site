@@ -423,8 +423,4 @@ window.addEventListener('click', (e) => {
 });
 
 
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> f40d2a0 (responsiveness fix and hamburger menu overhaul)
