@@ -489,6 +489,20 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+#contact fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#contact fieldset input[type="radio"],
+#contact fieldset input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+}
 
 .time-option:hover {
     background-color: #f0f0f0;
