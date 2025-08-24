@@ -6,6 +6,11 @@
     }
 
 
+@font-face {
+  font-family: 'boxicons';
+  src: url('https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff2') format('woff2');
+  font-display: swap;
+}
 
     /* Hero Section Styles */
     .hero {
